@@ -19,7 +19,7 @@ var sub = window.location.host.split('.');
 //   sub = null;
 // }
 console.log(sub);
-if (sub[0] == "www") {
+if (sub[0] === "www") {
   sub = null;
 } else {
   sub = sub[0];
@@ -39,6 +39,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 */
 
 if (sub == null) {
+  console.log("line 42")
   root.render(
     <RecoilRoot>
       <BrowserRouter>

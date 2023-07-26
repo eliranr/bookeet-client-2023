@@ -30,6 +30,9 @@ function App() {
   const [currenManager, setCurrenManager] = useRecoilState(currenManagerState);
   const [bub, setBub] = useRecoilState(bubState);
 
+  useEffect(() => {
+    console.log(manager);
+  }, [manager])
 
   useEffect(() => {
     if(mobState) {
