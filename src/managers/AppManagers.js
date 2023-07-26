@@ -71,11 +71,7 @@ function App() {
   }, [currentLang]);
 
   useEffect(() => {
-    fetch('/get-data',{
-      headers:{
-          "accepts":"application/json"
-      }
-  }).then(
+    fetch('https://test-eight-sigma-86.vercel.app/get-data').then(
       response => response.json()
     ).then(
       data => {
