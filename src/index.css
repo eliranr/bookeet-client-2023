@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .hoverEffect{
+        @apply cursor-pointer hover:!bg-gray-300 rounded-full transition duration-500 ease-out hover:shadow
+    }
+    .hoverEffect2 {
+        @apply cursor-pointer w-[85px] px-0 py-2 md:p-3 md:w-[93px] hover:bg-gray-200 rounded-md  text-center  transition duration-500 ease-out
+    }
+    .container{
+        @apply bg-white p-[25px] w-[90%] rounded-xl border shadow
+    }
+    .inps {
+        @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+    }
+    .inps-err {
+        @apply border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400
+    }
+    label {
+        @apply rtl:text-right
+    }
+    a {
+        @apply hover:underline text-blue-600 hover:text-blue-800
+    }
+    .but {
+        @apply border rounded-xl px-3 py-1 hover:text-white
+    }
+    .li-user {
+        @apply hover:bg-gray-100 px-5 h-[45px] flex items-center space-x-2 rtl:space-x-reverse cursor-pointer
+    }
+    .menu-icon {
+        @apply h-6 w-6 relative top-[1px]
+    }
+    .pop-mes {
+        @apply bg-blue-200 text-blc border font-semibold h-[45px] rounded-lg flex items-center justify-center px-3 min-w-[40px]
+    }
+    /* th, td {
+        @apply border
+    } */
+}
+
+.ReactModal__Overlay {
+    background-color: rgba(255, 255, 255, 0.40) !important;
+    z-index: 12;
+}
+
+.iti {
+    display: block !important;
+}
+select{
+    direction: ltr;
+}
+select option{
+    direction: ltr;
+}
+
+
+.css-1kr9x0n-MuiSnackbarContent-action {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+table .td {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+}
