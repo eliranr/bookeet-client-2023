@@ -13,6 +13,7 @@ import App from './managers/AppManagers';
 import AppCostumersApp from './costumers/AppCostumers'
 
 var sub = window.location.host.split('.');
+console.log(sub);
 if (sub[1] != null) {
   sub = sub[0];
 } else {
