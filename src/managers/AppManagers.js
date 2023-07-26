@@ -71,7 +71,7 @@ function App() {
   }, [currentLang]);
 
   useEffect(() => {
-    fetch('https://test-eight-sigma-86.vercel.app/get-data').then(
+    fetch('/get-data').then(
       response => response.json()
     ).then(
       data => {
