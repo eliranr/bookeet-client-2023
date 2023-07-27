@@ -32,13 +32,6 @@ function App() {
   const [bub, setBub] = useRecoilState(bubState);
 
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/users`)
-      .then(res => {
-        console.log(res.data);
-      })
-  }, [])
-
-  useEffect(() => {
     console.log(manager);
   }, [manager])
 
@@ -81,6 +74,10 @@ function App() {
   }, [currentLang]);
 
   useEffect(() => {
+    axios.get(`https://test-eight-sigma-86.vercel.app/get-data`)
+      .then(res => {
+        console.log(res.data);
+    })
     fetch('/get-data').then(
       response => response.json()
     ).then(
