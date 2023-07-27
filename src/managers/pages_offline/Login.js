@@ -25,7 +25,7 @@ export default function Login() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(obj)
     };
-    fetch('/login', requestOptions)
+    fetch('https://test-eight-sigma-86.vercel.app/login', requestOptions)
         .then(response => response.json())
         .then(data => {
           if (data === true) {
