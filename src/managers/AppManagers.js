@@ -8,6 +8,7 @@ import {useRecoilState} from 'recoil';
 import {langState, managerState, storeState, menuState, mobileState, menuMobileState, workersState, refreshState, loadingState, currenManagerState,
   bubState, currentime } from '../atom/modalAtom';
 import PopModal from '../components/PopModal';
+import axios from 'axios';
 
 
 function App() {
@@ -31,8 +32,17 @@ function App() {
   const [bub, setBub] = useRecoilState(bubState);
 
   useEffect(() => {
+    axios.get(`https://jsonplaceholder.typicode.com/users`)
+      .then(res => {
+        console.log(res.data);
+      })
+  }, [])
+
+  useEffect(() => {
     console.log(manager);
   }, [manager])
+
+ 
 
   useEffect(() => {
     if(mobState) {
