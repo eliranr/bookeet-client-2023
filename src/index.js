@@ -18,14 +18,14 @@ var sub = window.location.host.split('.');
  } else {
    sub = null;
  }
-console.log(sub);
+//console.log(sub);
 // if (sub[0] === "www") {
 //   sub = null;
 // } else {
 //   sub = sub[0];
 // }
 //console.log(sub);
-sub = null;
+//sub = null;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 /*
 <React.StrictMode>
@@ -39,7 +39,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 */
 
 if (sub == null) {
-  console.log("line 42")
   root.render(
     <RecoilRoot>
       <BrowserRouter>

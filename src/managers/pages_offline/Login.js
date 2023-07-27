@@ -28,6 +28,7 @@ export default function Login() {
     fetch('https://test-eight-sigma-86.vercel.app/login', requestOptions)
         .then(response => response.json())
         .then(data => {
+          console.log(data)
           if (data === true) {
             window.location.reload(true);
           } else {
