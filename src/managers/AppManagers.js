@@ -74,7 +74,7 @@ function App() {
   }, [currentLang]);
 
   useEffect(() => {
-    axios.get(`https://test-eight-sigma-86.vercel.app/get-data`)
+    axios.get(`https://jsonplaceholder.typicode.com/users`)
       .then(res => {
         console.log(res.data);
     })
