@@ -69,7 +69,7 @@ export default function AppCostumersApp({sub}) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({sub: sub})
     };
-    fetch('/get-data-clients', requestOptions)
+    fetch('https://test-eight-sigma-86.vercel.app/get-data-clients', requestOptions)
         .then(response => response.json())
         .then(data => {
           if (!data) {

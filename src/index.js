@@ -13,30 +13,27 @@ import App from './managers/AppManagers';
 import AppCostumersApp from './costumers/AppCostumers'
 
 var sub = window.location.host.split('.');
- if (sub[1] != null) {
-   sub = sub[0];
- } else {
-   sub = null;
- }
-//console.log(sub);
-// if (sub[0] === "www") {
-//   sub = null;
-// } else {
-//   sub = sub[0];
-// }
-//console.log(sub);
+//  if (sub[1] != null) {
+//    sub = sub[0];
+//  } else {
+//    sub = null;
+//  }
+console.log(sub);
+if (sub[0] === "www") {
+  sub = null;
+} else {
+  sub = sub[0];
+}
+
 //sub = null;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 /*
 <React.StrictMode>
   <App />
 </React.StrictMode>
-
-
-///
-
-
 */
+
+console.log(sub);
 
 if (sub == null) {
   root.render(
