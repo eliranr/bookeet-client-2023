@@ -78,37 +78,37 @@ function App() {
       .then(res => {
         console.log(res.data);
     })
-    fetch('/get-data').then(
-      response => response.json()
-    ).then(
-      data => {
-        if (!data) {
-          const diff = new Date().getTime() - timer;
-          setTimeout(() => {
-            setManager(false);
-            setStore(false);
-          }, 700 - diff);
-        } else {
-          setCurrenTime(data.currenTime)
+    // fetch('/get-data').then(
+    //   response => response.json()
+    // ).then(
+    //   data => {
+    //     if (!data) {
+    //       const diff = new Date().getTime() - timer;
+    //       setTimeout(() => {
+    //         setManager(false);
+    //         setStore(false);
+    //       }, 700 - diff);
+    //     } else {
+    //       setCurrenTime(data.currenTime)
 
-          setWorkers(move(data.workers.findIndex((element) => element.uid === data.manager.uid), 0, data.workers));
-          setMenuPos(data.manager.setting.menu_pos)
-          setManager(data.manager);
-          setStore(data.store);
-          if (refresh === 0) {
-            setCurrenManager(data.manager);
-          } else {
-            setCurrenManager(data.workers[data.workers.findIndex((element) => element.uid === currenManager.uid)]);
-            setBub({
-              bol: true,
-              text: 'שינויים בוצעו בהצלחה'
-            })
-          }
+    //       setWorkers(move(data.workers.findIndex((element) => element.uid === data.manager.uid), 0, data.workers));
+    //       setMenuPos(data.manager.setting.menu_pos)
+    //       setManager(data.manager);
+    //       setStore(data.store);
+    //       if (refresh === 0) {
+    //         setCurrenManager(data.manager);
+    //       } else {
+    //         setCurrenManager(data.workers[data.workers.findIndex((element) => element.uid === currenManager.uid)]);
+    //         setBub({
+    //           bol: true,
+    //           text: 'שינויים בוצעו בהצלחה'
+    //         })
+    //       }
           
-        }
-        setLoading(false);
-      }
-    )
+    //     }
+    //     setLoading(false);
+    //   }
+    // )
   }, [refresh]);
 
   const move = (from, to, arr) => {
