@@ -6,7 +6,7 @@ import Land from '../../lander/Land'
 
 export default function PanelOffline({param, toShow}) {
   return (
-    <div className={`transition-opacity ease-out duration-900 ${toShow ? 'opacity-100' : 'opacity-40'}`}>
+    <div dir='ltr' className={`transition-opacity ease-out duration-900 ${toShow ? 'opacity-100' : 'opacity-40'}`}>
       {pages[param]}
     </div>
   )

@@ -1,8 +1,9 @@
 import React from 'react'
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Prices() {
+  const navigate = useNavigate();
   var checkIconStyle = "w-[30px] mx-auto text-green-500";
 
   return (
@@ -100,7 +101,11 @@ export default function Prices() {
         <tr>
           <td></td>
           <td>
-            <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-5 border border-blue-500 hover:border-transparent rounded-full">
+            <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-5 border border-blue-500 hover:border-transparent rounded-full"
+              onClick={() => {
+                navigate('/register');
+              }}
+            >
               נסה כעת!
             </button>
           </td>
