@@ -9,6 +9,7 @@ import {langState, managerState, storeState, menuState, mobileState, menuMobileS
   bubState, currentime } from '../atom/modalAtom';
 import PopModal from '../components/PopModal';
 import axios from 'axios';
+import Land from '../lander/Land';
 
 
 function App() {
@@ -155,7 +156,7 @@ function App() {
   if (manager === false) {
     if (pagesOffline.includes(param) || param == null) {
       if (param == null) param = 'home';
-      return <PanelOffline param={param} toShow={fade} />
+      return <Land />
     }
     else
       navigate('/');
