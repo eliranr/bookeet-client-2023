@@ -36,9 +36,15 @@
     .pop-mes {
         @apply bg-blue-200 text-blc border font-semibold h-[45px] rounded-lg flex items-center justify-center px-3 min-w-[40px]
     }
-    /* th, td {
-        @apply border
-    } */
+    td:first-child, th:first-child {
+        @apply !bg-[#e5e5e5]
+    }
+    td:nth-child(2), td:nth-child(3) {
+        @apply !bg-white w-[35%] text-center 
+    }
+    th, td {
+        @apply border h-[60px]
+    }
 }
 
 .ReactModal__Overlay {

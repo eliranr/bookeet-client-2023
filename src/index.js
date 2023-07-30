@@ -11,6 +11,7 @@ import { RecoilRoot } from "recoil";
 
 import App from './managers/AppManagers';
 import AppCostumersApp from './costumers/AppCostumers'
+import Land from './lander/Land';
 
 var sub = window.location.host.split('.');
 //  if (sub[1] != null) {
@@ -18,14 +19,14 @@ var sub = window.location.host.split('.');
 //  } else {
 //    sub = null;
 //  }
-console.log(sub);
+
 if (sub[0] === "www") {
   sub = null;
 } else {
   sub = sub[0];
 }
 
-//sub = null;
+sub = null;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 /*
 <React.StrictMode>
