@@ -7,7 +7,11 @@ export default function Menu() {
     <div className='flex justify-center h-[87px] bg-[#0db9b9] px-[20px]'>
         <div className='flex items-center justify-between w-full max-w-[1050px]'>
             <div className='invisible sm:visible'>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-5 rounded-full">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-5 rounded-full"
+                    onClick={() => {
+                        navigate('/register');
+                    }}
+                >
                     הרשמה
                 </button>
                 <button class=" text-white font-bold py-4 px-5 rounded-full" 

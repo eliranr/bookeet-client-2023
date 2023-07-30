@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Opening() {
+    const navigate = useNavigate();
   return (
     <div className='flex justify-center text-[#343a40] px-[20px] my-5'>
         <div className='flex flex-col-reverse sm:flex-row space-y-reverse space-y-6 sm:space-y-0 text-center sm:text-right items-center justify-between w-full max-w-[800px] pb-0 sm:pb-[70px] py-[70px]'>
@@ -15,7 +17,11 @@ export default function Opening() {
                     מעקב אחר העסק שלך,<br />
                     לעשות את הכל פשוט יותר.
                 </p>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 w-[150px] rounded-full">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 w-[150px] rounded-full"
+                    onClick={() => {
+                        navigate('/login');
+                    }}
+                >
                     נסה עכשיו!
                 </button>
             </div>
