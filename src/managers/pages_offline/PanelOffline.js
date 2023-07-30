@@ -3,6 +3,7 @@ import Menu from '../../components/Menu'
 import Login from './Login'
 import Home from './Home'
 import Register from './Register'
+import Land from '../../lander/Land'
 
 export default function PanelOffline({param, toShow}) {
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function PanelOffline({param, toShow}) {
 
 
 const pages = {
-    home: <Home />,
+    home: <Land />,
     login: <Login />,
     register: <Register />,
 }
