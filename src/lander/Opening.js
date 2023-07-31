@@ -17,7 +17,7 @@ export default function Opening() {
                     מעקב אחר העסק שלך,<br />
                     לעשות את הכל פשוט יותר.
                 </p>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 w-[150px] rounded-full"
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 w-[150px] rounded-full"
                     onClick={() => {
                         navigate('/login');
                     }}
